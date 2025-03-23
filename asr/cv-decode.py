@@ -5,6 +5,9 @@ import requests, os
 # df = pd.read_csv("../data/common_voice/cv-valid-dev/cv-valid-dev.csv")
 df = pd.read_csv("../data/common_voice/cv-valid-dev.csv")
 
+# /Users/brandyscrub/Documents/NUS/Y4S2/HTX/xData/new2/technical_test/asr/cv-decode.py
+# /Users/brandyscrub/Documents/NUS/Y4S2/HTX/xData/new2/technical_test/data/common_voice/cv-valid-dev.csv
+
 transcriptions = []
 
 for _, row in df.iterrows():
