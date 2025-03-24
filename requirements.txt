@@ -17,6 +17,7 @@ datasets==3.4.1
 debugpy==1.8.13
 decorator==5.2.1
 dill==0.3.8
+evaluate==0.4.3
 executing==2.2.0
 filelock==3.18.0
 Flask==3.1.0
@@ -24,12 +25,14 @@ frozenlist==1.5.0
 fsspec==2024.12.0
 huggingface-hub==0.29.3
 idna==3.10
+InstructorEmbedding==1.0.1
 ipykernel==6.29.5
 ipython==9.0.2
 ipython_pygments_lexers==1.1.1
 itsdangerous==2.2.0
 jedi==0.19.2
 Jinja2==3.1.6
+jiwer==3.1.0
 joblib==1.4.2
 jupyter_client==8.6.3
 jupyter_core==5.7.2
@@ -50,6 +53,7 @@ packaging==24.2
 pandas==2.2.3
 parso==0.8.4
 pexpect==4.9.0
+pillow==11.1.0
 platformdirs==4.3.7
 pooch==1.8.2
 prompt_toolkit==3.0.50
@@ -64,11 +68,13 @@ python-dateutil==2.9.0.post0
 pytz==2025.1
 PyYAML==6.0.2
 pyzmq==26.3.0
+RapidFuzz==3.12.2
 regex==2024.11.6
 requests==2.32.3
 safetensors==0.5.3
 scikit-learn==1.6.1
 scipy==1.15.2
+sentence-transformers==3.4.1
 setuptools==77.0.3
 six==1.17.0
 soundfile==0.13.1
