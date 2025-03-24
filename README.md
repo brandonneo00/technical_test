@@ -52,6 +52,8 @@ trainer = Trainer(
 ```
 which contains a callback that empties the cache every 500 steps to reduce RAM usage. And the model is trained.
 
+![Training and Validation Metrics](diagram/training_loss.jpg)
+
 ### For Task 3c
 - The overall performance metric for ASR was chosen to be the Word Error Rate (WER) where we compare the model's predictions to the target text transcripts. Another secondary metric that can be considered is the Character Error Rate (CER) where the comparison between the model's transcription to the ground truth text happens on a character-by-character basic. 
 - Both WER and CER are useful metrics as the main goal of ASR is to produce accurate text from speech and they provide a clear, quantitative measure of transcription quality. Furthermore, they are language-agnostic and task-adaptable as well. 
