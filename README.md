@@ -1,5 +1,8 @@
 # Assessment README
 
+### For Task 2d:
+- the `cv-valid-dev.csv` file that is obtained from my API after writing the generated transcribed text is in `data/common_voice/cv-valid-dev`
+
 ### For Task 2e:
 - Ensure that you have Docker installed
 - In your terminal, change directory to the asr folder (where the Dockerfile is located)
@@ -12,9 +15,9 @@
 - The subsequent tasks (task 4 and 5) were thus under the assumption of the 'base' model instead in order to attempt them 
 1. Preprocessing was first done on the audio files by resampling them to 16kHz so as to fit the sampling rate of the audio data taken in by the model. Due to significant RAM constraints during training (limited by 12GB of RAM I had available), I filtered the training audio data to only include those that are 6s and below. This eased the RAM usage and made training possible. Finally, preprocessing was also done on the transcription by making them capitalized, to be compatible with the "Wav2Vec2CTCTokenizer.from_pretrained("facebook/wav2vec2-large-960h")" tokenizer used that contained only capital letters in its dictionary.
 2. The unmodified Wav2Vec2CTCTokenizer.from_pretrained("facebook/wav2vec2-large-960h") tokenizer was used.
-3. The Wav2Vec2FeatureExtractor feature extractor was used with the parameters: feature_size=1, sampling_rate=16000, padding_value=0.0, do_normalize=True. The feature size is set to 1 as the input is a single vector feature. The padding value of 0 indicates padding the audio data with silence. Normalization makes the statistics of all audio input data equal to help with traning. 
+3. The Wav2Vec2FeatureExtractor feature extractor was used with the parameters: feature_size=1, sampling_rate=16000, padding_value=0.0, do_normalize=True. The feature size is set to 1 as the input is a single vector feature. The padding value of 0 indicates padding the audio data with silence. Normalization makes the statistics of all audio input data equal to help with training. 
 4. The general workflow is as follows:
-- Resample audios into a new folder
+- Resample audios into a new folder in `data/resample_audio`
 - Generate a new cv-valid-train_filter.csv from cv-valid-train which only contains data where audio is <= 6s.
 - A AudioTextDataset class was created which takes in the cv-valid-train_filtered.csv or cv-valid-test.csv filepath and returns either train_dataset, val_dataset or test_dataset (performing train-val split) that are each an array of dictionaries storing the feature extracted audio data labeled "input_values" and tokenized transcript labeled "labels"
 - A DataCollatorCTCWithPadding is also created to feed the training data into the model in batches, padding the audio and transcript data to the same length beforehand.
