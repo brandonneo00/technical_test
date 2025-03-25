@@ -63,7 +63,6 @@ which contains a callback that empties the cache every 500 steps to reduce RAM u
 - Interpretation of Results of Finetuned Model: 
 WER at ~7.46%:
 A WER below 10% is generally considered strong for many ASR tasks, indicating that the model transcribes most words accurately.
-
 CER at ~3.14%:
 The CER being lower than the WER is expected, since character‐level errors are often fewer than whole‐word errors. A CER around 3% suggests that the model handles the majority of the phoneme‐to‐character mappings correctly.
 
