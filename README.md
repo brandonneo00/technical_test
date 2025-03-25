@@ -135,3 +135,5 @@ The CER being lower than the WER is expected, since character‐level errors are
 ├── requirements.txt
 ├── training-report.pdf
 </pre>
+
+📁 wav2vec2-large-960h-cv can be downloaded from this Google Drive link:  https://drive.google.com/drive/folders/1CTa3uJ3ruqEhK6pOijxZNoXALu3JUTJT?usp=drive_link
