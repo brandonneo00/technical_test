@@ -8,7 +8,6 @@ cv-valid-dev/sample-001101.mp3
 cv-valid-dev/sample-001243.mp3
 cv-valid-dev/sample-001501.mp3
 cv-valid-dev/sample-001933.mp3
-cv-valid-dev/sample-002405.mp3
 cv-valid-dev/sample-002453.mp3
 cv-valid-dev/sample-003065.mp3
 cv-valid-dev/sample-003219.mp3
